@@ -1,13 +1,13 @@
+%define 	ftpver	0.07
 Summary:	Command-line ACPI client
 Summary(pl):	Klient ACPI dzia³aj±cy z linii poleceñ
 Name:		acpi
-Version:	0.0.6
+Version:	0.0.7
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://grahame.angrygoats.net/source/acpi/%{name}_%{version}.tar.gz
-# Source0-md5:	062a77b38b929fe34120c3f258fd01ba
-Patch0:		%{name}-debian.patch
+Source0:	http://grahame.angrygoats.net/source/acpi/%{name}-%{ftpver}.tar.gz
+# Source0-md5:	791f1d619955f60e4b5223468f6fb4db
 URL:		http://grahame.angrygoats.net/acpi.shtml
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,8 +24,7 @@ prób± zast±pienia funkcjonalno¶ci "starego" polecenia apm na systemach
 opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %prep
-%setup -q -n %{name}
-%patch0 -p1
+%setup -q -n %{name}-%{ftpver}
 
 %build
 %{__aclocal}
@@ -41,13 +40,10 @@ install -d $RPM_BUILD_ROOT%{_mandir}/man1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{name}.1	$RPM_BUILD_ROOT%{_mandir}/man1
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CREDITS ChangeLog 
+%doc AUTHORS ChangeLog 
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man?/*
