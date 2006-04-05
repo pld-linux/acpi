@@ -1,15 +1,14 @@
-%define 	ftpver	0.07
 Summary:	Command-line ACPI client
 Summary(pl):	Klient ACPI dzia³aj±cy z linii poleceñ
 Name:		acpi
-Version:	0.0.7
+Version:	0.09
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://grahame.angrygoats.net/source/acpi/%{name}-%{ftpver}.tar.gz
-# Source0-md5:	791f1d619955f60e4b5223468f6fb4db
+Source0:	http://grahame.angrygoats.net/source/acpi/%{name}-%{version}.tar.gz
+# Source0-md5:	a5a70595834b487c3a2f9278a3d60768
 URL:		http://grahame.angrygoats.net/acpi.shtml
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,11 +23,12 @@ prób± zast±pienia funkcjonalno¶ci "starego" polecenia apm na systemach
 opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %prep
-%setup -q -n %{name}-%{ftpver}
+%setup -q
 
 %build
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -45,5 +45,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog 
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
