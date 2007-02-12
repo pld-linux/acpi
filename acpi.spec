@@ -1,5 +1,5 @@
 Summary:	Command-line ACPI client
-Summary(pl):	Klient ACPI dzia³aj±cy z linii poleceñ
+Summary(pl.UTF-8):   Klient ACPI dziaÅ‚ajÄ…cy z linii poleceÅ„
 Name:		acpi
 Version:	0.09
 Release:	1
@@ -17,9 +17,9 @@ Linux ACPI client is a small command-line program that attempts to
 replicate the functionality of the 'old' apm command on ACPI systems.
 It includes battery and thermal information.
 
-%description -l pl
-Klient Linux ACPI to ma³y program dzia³aj±cy z linii poleceñ, bêd±cy
-prób± zast±pienia funkcjonalno¶ci "starego" polecenia apm na systemach
+%description -l pl.UTF-8
+Klient Linux ACPI to maÅ‚y program dziaÅ‚ajÄ…cy z linii poleceÅ„, bÄ™dÄ…cy
+prÃ³bÄ… zastÄ…pienia funkcjonalnoÅ›ci "starego" polecenia apm na systemach
 opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %prep
