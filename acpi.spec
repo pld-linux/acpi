@@ -1,5 +1,5 @@
 Summary:	Command-line ACPI client
-Summary(pl.UTF-8):   Klient ACPI działający z linii poleceń
+Summary(pl.UTF-8):	Klient ACPI działający z linii poleceń
 Name:		acpi
 Version:	0.09
 Release:	1
