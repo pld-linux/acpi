@@ -3,13 +3,14 @@ Summary(pl.UTF-8):	Klient ACPI działający z linii poleceń
 Name:		acpi
 Version:	0.09
 Release:	1
-License:	GPL
-Group:		Applications
+License:	GPL v2+
+Group:		Applications/System
 Source0:	http://grahame.angrygoats.net/source/acpi/%{name}-%{version}.tar.gz
 # Source0-md5:	a5a70595834b487c3a2f9278a3d60768
 URL:		http://grahame.angrygoats.net/acpi.shtml
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+ExclusiveArch:	%{ix86} %{x8664} ia64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/acpi
