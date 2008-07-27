@@ -2,7 +2,7 @@ Summary:	Command-line ACPI client
 Summary(pl.UTF-8):	Klient ACPI działający z linii poleceń
 Name:		acpi
 Version:	0.09
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://grahame.angrygoats.net/source/acpi/%{name}-%{version}.tar.gz
