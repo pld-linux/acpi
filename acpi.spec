@@ -1,13 +1,13 @@
 Summary:	Command-line ACPI client
 Summary(pl.UTF-8):	Klient ACPI działający z linii poleceń
 Name:		acpi
-Version:	0.09
-Release:	3
+Version:	1.5
+Release:	1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	http://grahame.angrygoats.net/source/acpi/%{name}-%{version}.tar.gz
-# Source0-md5:	a5a70595834b487c3a2f9278a3d60768
-URL:		http://grahame.angrygoats.net/acpi.shtml
+Source0:	http://downloads.sourceforge.net/acpiclient/%{name}-%{version}.tar.gz
+# Source0-md5:	ccfee3d53eba9c9947adafbcc1387611
+URL:		http://acpiclient.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 ExclusiveArch:	%{ix86} %{x8664} ia64
@@ -48,3 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/acpi
+%{_mandir}/man1/acpi.1*
