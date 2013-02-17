@@ -1,0 +1,9 @@
+--- acpi-1.6/configure.ac.orig	2012-01-13 12:38:58.000000000 +0100
++++ acpi-1.6/configure.ac	2013-02-17 21:26:27.860871376 +0100
+@@ -1,5 +1,5 @@
+ AC_INIT(main.c)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AM_INIT_AUTOMAKE(acpi, 1.6)
+ AC_PROG_CC
+ AC_ISC_POSIX

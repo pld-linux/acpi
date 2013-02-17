@@ -7,6 +7,7 @@ License:	GPL v2+
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/acpiclient/%{name}-%{version}.tar.gz
 # Source0-md5:	68d0104a7825c904e3f45de8682cee19
+Patch0:		%{name}-am.patch
 URL:		http://acpiclient.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -25,6 +26,7 @@ opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
