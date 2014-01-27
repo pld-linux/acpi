@@ -1,12 +1,12 @@
 Summary:	Command-line ACPI client
 Summary(pl.UTF-8):	Klient ACPI działający z linii poleceń
 Name:		acpi
-Version:	1.6
+Version:	1.7
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/acpiclient/%{name}-%{version}.tar.gz
-# Source0-md5:	68d0104a7825c904e3f45de8682cee19
+# Source0-md5:	b52ce4ca39bbf7000a1c2de8879f1dcb
 Patch0:		%{name}-am.patch
 URL:		http://acpiclient.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
