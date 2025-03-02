@@ -26,7 +26,7 @@ opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
