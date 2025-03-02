@@ -1,17 +1,16 @@
 Summary:	Command-line ACPI client
 Summary(pl.UTF-8):	Klient ACPI działający z linii poleceń
 Name:		acpi
-Version:	1.7
+Version:	1.8
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	http://downloads.sourceforge.net/acpiclient/%{name}-%{version}.tar.gz
-# Source0-md5:	b52ce4ca39bbf7000a1c2de8879f1dcb
-Patch0:		%{name}-am.patch
-URL:		http://acpiclient.sourceforge.net/
+Source0:	https://downloads.sourceforge.net/acpiclient/%{name}-%{version}.tar.gz
+# Source0-md5:	50804ce5dc27443e649e1ecf089da7b9
+URL:		https://acpiclient.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-ExclusiveArch:	%{ix86} %{x8664} ia64
+ExclusiveArch:	%{ix86} %{x8664} x32 ia64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +25,6 @@ opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %prep
 %setup -q
-%patch -P0 -p1
 
 %build
 %{__aclocal}
@@ -38,7 +36,6 @@ opartych o ACPI. Zawiera informacje o zasilaniu i temperaturze.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -48,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS README
 %attr(755,root,root) %{_bindir}/acpi
 %{_mandir}/man1/acpi.1*
